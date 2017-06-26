@@ -1,0 +1,33 @@
+package com.wang.priactice;
+
+
+public class TwoTree {
+	public static void main(String[] args) {
+		Node parent = new Node(0);
+		int[] array = { 5, 2, 7, 3, 1, 4, 6 };
+		for (int i = 0; i < array.length; i++) {
+			for(int j = 0; j < i; j++){
+				if(array[i] < array[j]){
+					int temp = array[i];
+					array[i] = array[j];
+					array[j] = temp;
+				}
+			}
+		}
+		
+	}
+
+	public static class Node{
+		public Node left;
+		public Node right;
+		public int value;
+		
+		public Node(int value){
+			super();
+			this.value = value;
+		}
+		public Node(){
+			super();
+		}
+	}
+}

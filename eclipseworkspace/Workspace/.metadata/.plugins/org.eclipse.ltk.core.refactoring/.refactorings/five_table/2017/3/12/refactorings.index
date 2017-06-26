@@ -1,0 +1,8 @@
+1490414302301	Rename resource 'NewFile.jsp'
+1490414663342	Rename package 'com.meituan.Bean'
+1490414841117	Encapsulate field 'list'
+1490414845557	Encapsulate field 'bean'
+1490419974051	Rename resource 'NewFile.jsp'
+1490420747809	Delete element
+1490424427699	Encapsulate field 'count'
+1490424948569	Encapsulate field 'address'

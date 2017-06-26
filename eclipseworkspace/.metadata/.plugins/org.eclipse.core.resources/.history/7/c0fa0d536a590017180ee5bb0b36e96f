@@ -1,0 +1,5 @@
+package com.taotao.web.httpclient;
+
+public class IdleConnectionEvicor {
+
+}

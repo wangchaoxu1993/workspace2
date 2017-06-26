@@ -1,0 +1,5 @@
+package com.taotao.manage.controller;
+
+public class ContentCategoryController {
+
+}

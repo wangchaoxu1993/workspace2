@@ -1,0 +1,7 @@
+package com.taotao.manage.service;
+
+import org.springframework.stereotype.Service;
+
+public class ContentCatetgoryService extends BaseService<ContentCatetgory> {
+
+}

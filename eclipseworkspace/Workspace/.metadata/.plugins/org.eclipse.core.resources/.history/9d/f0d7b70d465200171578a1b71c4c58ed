@@ -1,0 +1,18 @@
+package com.wang.priactice;
+
+public class Node {
+	
+	public Node left;
+	public Node right;
+	public int value;
+	
+	public Node() {
+		super();
+	}
+
+	public Node(int value) {
+		super();
+		this.value = value;
+	}
+	
+}

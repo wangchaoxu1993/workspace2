@@ -1,0 +1,29 @@
+package com.wang.priactice;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class TwoTree {
+	public static void main(String[] args) {
+		// 二叉树
+		int[] array = {1,2,3,4,5,6,7};
+		List<Integer> list = new LinkedList<Integer>();
+		int parent = 4;
+		int left = 0,right = 0;
+		System.out.println("         "+parent);
+		for (int i : array) {
+			if(i<parent){
+				System.out.print("      "+i);
+				left = i;
+			}
+			for(int j: array){
+				if(j>parent){
+					right = j;
+					System.out.print("      "+j);
+					break;
+				}
+			}
+			System.out.println();
+		}
+	}
+}

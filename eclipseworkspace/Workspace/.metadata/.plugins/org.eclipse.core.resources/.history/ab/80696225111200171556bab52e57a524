@@ -1,0 +1,11 @@
+package com.meituan.dao;
+
+import java.util.List;
+
+import com.meituan.bean.Bean;
+
+public interface IDao {
+
+	Bean search(String address);
+
+}

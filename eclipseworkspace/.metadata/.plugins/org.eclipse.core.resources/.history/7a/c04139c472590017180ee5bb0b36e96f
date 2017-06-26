@@ -1,0 +1,31 @@
+package com.taotao.web.service;
+
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+@Service
+public class IndexService {
+
+    @Autowired
+    private ApiService apiService;
+    
+    private static final ObjectMapper MAPPER = new ObjectMapper();
+    
+    public String queryIndexAD1() {
+        String url = "http://manage.taotao.com/rest/api/content?categoryId=33&page=1&rows=1";
+       String jsonData = this.apiService.doGet(url);
+       if(StringUtils.isEmpty(jsonData)){
+           return null;
+       }
+       // 解析json数据，封装前端所需要的结构
+       
+       
+       
+        return null;
+    }
+
+    
+}

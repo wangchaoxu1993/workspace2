@@ -1,0 +1,7 @@
+http.maxTotal=200
+http.defaultMaxPerRoutel=50
+
+http.connectTimeoutt=1000
+http.conntctionRequestTimeout=500
+http.socketTimeout=10000
+http.staleConnectionCheckEnabled=true

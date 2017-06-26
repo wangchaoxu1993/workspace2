@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="devicePlan" xmlns="http://jbpm.org/4.4/jpdl">
+   <start name="开始" g="383,8,48,48">
+      <transition name="to 提交申请" to="提交申请" g="-69,-22"/>
+   </start>
+   <task name="提交申请" g="356,85,107,52" assignee="#{application.elecUser.logonName}">
+      <transition name="to 审批【部门经理】" to="审批【部门经理】" g="-117,-22"/>
+   </task>
+   <task name="审批【部门经理】" g="353,164,112,52" assignee="#{departmentManager}">
+      <transition name="to 审批【总经理】" to="审批【总经理】" g="-105,-22"/>
+   </task>
+   <end name="结束" g="376,324,48,48"/>
+   <task name="审批【总经理】" g="349,252,109,52" assignee="#{generalManager}">
+      <transition name="to 结束" to="结束" g="-45,-22"/>
+   </task>
+</process>

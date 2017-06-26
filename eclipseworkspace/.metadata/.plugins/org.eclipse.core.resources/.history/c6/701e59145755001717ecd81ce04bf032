@@ -1,0 +1,13 @@
+package cn.itcast.usermanage.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@RequestMapping("new/user")
+@Controller
+public class NewUserController {
+
+    // 根据用户id查询用户信息
+    @RequestMapping(value = "{id}", method = RequestMethod.GET)
+    
+}

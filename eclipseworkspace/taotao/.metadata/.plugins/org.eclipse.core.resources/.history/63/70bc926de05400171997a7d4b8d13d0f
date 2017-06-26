@@ -1,0 +1,26 @@
+package cn.itcast.usermanage.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+/**
+ * 通用的页面跳转逻辑
+ * @author Administrator
+ *
+ */
+@Controller
+@RequestMapping("page")
+public class PageController {
+
+    /**
+     * 具体的跳转页面逻辑
+     * @param pageName
+     * @return 视图名
+     */
+    @RequestMapping(value = "{pageName}")
+    public String toPage(@PathVariable("pageName") String pageName){
+        return pageName;
+    }
+    
+}

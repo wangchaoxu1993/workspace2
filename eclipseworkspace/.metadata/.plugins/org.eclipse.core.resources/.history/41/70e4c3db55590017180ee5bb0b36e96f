@@ -1,0 +1,28 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+
+	<bean class="org.apache.http.impl.conn.PoolingHttpClientConnectionManager">
+		<!-- 最大连接数 -->
+		<property name="maxTotal" value="${http.maxTotal}" />
+		<!-- 设置每个主机地址的并发数 -->
+		<property name="defaultMaxPerRoutel" value="${http.defaultMaxPerRoutel}" />
+	</bean>
+
+	<!-- Httpclient的构建器 -->
+	<bean id="httpClientBuilder" class="org.apache.http.impl.client.HttpClientBuilder">
+		<property name="connectionManager" ref="connectionManager"></property>
+	</bean>
+
+	<!-- Httpclient对象 -->
+	<bean class="org.apache.http.impl.client.CloseableHttpClient"
+		factory-bean="httpClientBuilder" factory-method="build">
+
+	</bean>
+
+</beans>

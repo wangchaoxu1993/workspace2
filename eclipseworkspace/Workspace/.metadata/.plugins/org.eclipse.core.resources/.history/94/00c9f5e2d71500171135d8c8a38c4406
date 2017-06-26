@@ -1,0 +1,61 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<base href="<%=basePath%>">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="<%=path %>/js/index2.css" type="text/css"></link>
+<script type="text/javascript" src="<%=path %>/js/jquery-1.8.2.min.js"></script></head>
+<script type="text/javascript">
+		function city(pid){
+			$.post("Bean_clist.action",{pid:pid},function(obj){
+				var html = "";
+				for ( var i in obj) {
+					html += "<option value='"+obj[i].cid+"'>"+obj[i].cname+"</option>";
+				}
+				$("#cid").html(html);
+			},"json");
+		}
+</script>
+<body>
+	<center>
+		<form action="Bean_addUser" method="post">
+			<table>
+				<tr>
+					<td>客户姓名<input name="bean.uname"></td>
+				</tr>
+				<tr>
+					<td>
+					性别<input type="radio" name="bean.sex" value="1">男
+					   <input type="radio" name="bean.sex" value="0">女
+					</td>
+				</tr>
+				<tr>
+					<td>生日<input name="bean.birthday"></td>
+				</tr>
+				<tr>
+					<td>省<select name="bean.pid" id="pid" onchange="city(this.value)">
+					<option>--请选择--</option>
+						<c:forEach items="${list }" var="s">
+							<option value="${s.pid }">${s.pname }</option>
+						</c:forEach>
+					</select></td>
+				</tr>
+				<tr>
+					<td>市<select name="bean.cid" id="cid"></select></td>
+				</tr>
+				<tr>
+					<td><input type="submit" value="保存"></td>
+				</tr>
+            </table>
+		</form>
+	</center>
+</body>
+</html>

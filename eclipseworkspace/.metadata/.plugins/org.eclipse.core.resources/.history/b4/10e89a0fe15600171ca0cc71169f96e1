@@ -1,0 +1,110 @@
+package com.taotao.manage.service;
+
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.github.abel533.mapper.Mapper;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.taotao.manage.pojo.BasePojo;
+
+@Service
+public abstract class BaseService<T extends BasePojo> {
+
+    // @Autowired
+    // private Map<T> map;
+
+    public abstract Mapper<T> getMapper();
+
+    /**
+     * 根据id查询数据
+     * 
+     * @param id
+     * @return
+     */
+    public T queryById(Long id) {
+        return this.getMapper().selectByPrimaryKey(id);
+    }
+
+    /**
+     * 查询所有数据
+     * 
+     * @return
+     */
+    public List<T> queryAll() {
+        return this.getMapper().select(null);
+    }
+
+    /**
+     * 根据条件查询一条数据，如果该条件所查询的数据为多条，会抛出异常
+     * 
+     * @param record
+     * @return
+     */
+    public T queryOne(T record) {
+        return this.getMapper().selectOne(record);
+    }
+    
+    /**
+     * 根据条件查询多条数据
+     * @param record
+     * @return
+     */
+    public List<T> queryListByWhere(T record){
+        return this.getMapper().select(record);
+    }
+    
+    /**
+     * 根据条件分页查询数据
+     * @param record
+     * @param page
+     * @param rows
+     * @return
+     */
+    public PageInfo<T> queryPageListByWhere(T record, Integer page, Integer rows){
+        // 设置分页参数
+        PageHelper.startPage(page, rows);
+        List<T> list = this.getMapper().select(record);
+        return new PageInfo<T>(list);
+    }
+    
+    /**
+     * 新增数据
+     * @param record
+     * @return
+     */
+    public Integer save(T record){
+        record.setCreated(new Date());
+        record.setUpdated(record.getCreated());
+        return this.getMapper().insert(record);
+    }
+    
+    /**
+     * 选择不为null的字段作为插入数据的字段来插入数据
+     * @param record
+     * @return
+     */
+    public Integer saveSelective(T record){
+        return this.getMapper().insertSelective(record);
+    }
+    
+    /**
+     * 更新数据
+     * @param record
+     * @return
+     */
+    public Integer update(T L){
+        return this.getMapper().updateByPrimaryKey(L);
+    }
+    
+    /**
+     * 选择不为null的字段作为更新数据的字段来更新数据
+     * @param record
+     * @return
+     */
+    public Integer updateSelective(T record){
+        return this.getMapper().updateByPrimaryKeySelective(record);
+    }
+}

@@ -1,0 +1,6 @@
+package com.taotao.manage.service;
+
+import com.taotao.manage.pojo.ContentCategory;
+public class ContentCatetgoryService extends BaseService<ContentCatetgory> {
+
+}
