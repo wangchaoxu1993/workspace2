@@ -1,7 +1,0 @@
-package com.taotao.manage.mapper;
-
-import com.github.abel533.mapper.Mapper;
-
-public interface ItemParamItemMapper extends Mapper<ItemParam> {
-
-}

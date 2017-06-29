@@ -1,8 +1,0 @@
-package com.taotao.web.service;
-
-public class Snippet {
-    public static void main(String[] args) {
-        IndexService
-    }
-}
-

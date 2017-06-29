@@ -1,7 +1,0 @@
-package com.taotao.web.service;
-
-@Service
-public class IndexService {
-
-    
-}

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-  <uri name="http://www.springframework.org/schema/aop" uri="file:///F:/淘淘商城_上海传智29期2016-08【张志君】/课前资料/day01（RESTful%20Web%20Service、SVN）/开发资料/xml约束/xsd/spring-aop-4.0.xsd"/>
-  <uri name="http://www.springframework.org/schema/beans" uri="file:///F:/淘淘商城_上海传智29期2016-08【张志君】/课前资料/day01（RESTful%20Web%20Service、SVN）/开发资料/xml约束/xsd/spring-beans-4.0.xsd"/>
-  <uri name="http://www.springframework.org/schema/context" uri="file:///F:/淘淘商城_上海传智29期2016-08【张志君】/课前资料/day01（RESTful%20Web%20Service、SVN）/开发资料/xml约束/xsd/spring-context-4.0.xsd"/>
-  <uri name="http://www.springframework.org/schema/mvc" uri="file:///F:/淘淘商城_上海传智29期2016-08【张志君】/课前资料/day01（RESTful%20Web%20Service、SVN）/开发资料/xml约束/xsd/spring-mvc-4.0.xsd"/>
-  <uri name="http://www.springframework.org/schema/tx" uri="file:///F:/淘淘商城_上海传智29期2016-08【张志君】/课前资料/day01（RESTful%20Web%20Service、SVN）/开发资料/xml约束/xsd/spring-tx-4.0.xsd"/>
-  <uri name="http://www.springframework.org/schema/util" uri="file:///F:/淘淘商城_上海传智29期2016-08【张志君】/课前资料/day01（RESTful%20Web%20Service、SVN）/开发资料/xml约束/xsd/spring-util-4.0.xsd"/>
-</catalog>

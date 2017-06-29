@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-  <system systemId="http://struts.apache.org/dtds/struts-2.3.dtd" uri="file:///C:/Users/Administrator.USER-20161119YW/Desktop/jar包+工具类/struts-2.3.dtd"/>
-  <system systemId="http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" uri="file:///C:/Users/Administrator.USER-20161119YW/Desktop/jar包+工具类/hibernate-mapping-3.0.dtd"/>
-  <system systemId="http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd" uri="file:///C:/Users/Administrator.USER-20161119YW/Desktop/jar包+工具类/hibernate-configuration-3.0.dtd"/>
-</catalog>

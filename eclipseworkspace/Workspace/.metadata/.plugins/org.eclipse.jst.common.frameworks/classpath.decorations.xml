@@ -1,7 +1,0 @@
-<classpath>
-  <container id="struts_m2m!org.eclipse.jst.j2ee.internal.web.container">
-    <entry id="D:/eclipseworkspace/Workspace/struts_m2m/WebContent/WEB-INF/lib/tonysong-struts2-uti-1506.jar">
-      <source-attachment-path>C:/Users/Administrator.USER-20161119YW/Desktop/struts2_util</source-attachment-path>
-    </entry>
-  </container>
-</classpath>

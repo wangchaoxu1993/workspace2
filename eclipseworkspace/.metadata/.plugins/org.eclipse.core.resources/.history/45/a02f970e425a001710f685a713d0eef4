@@ -1,5 +1,0 @@
-package com.taotao.sso.mapper;
-
-public interface UserMapper {
-
-}

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;ssh_EShop/WebContent/WEB-INF/jsp&apos; to &apos;login&apos;" description="Rename resource &apos;jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/WEB-INF/jsp" name="login" stamp="1489475215806" updateReferences="true"/>
-</session>

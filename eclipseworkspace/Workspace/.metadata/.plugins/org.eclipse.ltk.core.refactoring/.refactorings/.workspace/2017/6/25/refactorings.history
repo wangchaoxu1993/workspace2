@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;easyUI1502J&apos;" deleteContents="true" description="Delete resource &apos;easyUI1502J&apos;" element1="/easyUI1502J" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1497840501281"/>&#x0A;<refactoring comment="Delete resource &apos;itcast-usermanage&apos;" deleteContents="true" description="Delete resource &apos;itcast-usermanage&apos;" element1="/itcast-usermanage" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1497860410621"/>
-</session>
